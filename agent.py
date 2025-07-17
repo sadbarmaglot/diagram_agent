@@ -65,8 +65,6 @@ class DiagramAgent:
         """
         Main entrypoint for user messages or continuation after tool call.
         """
-        logger.info(self.chat_history)
-
         if user_input:
             self.chat_history.append(ChatCompletionUserMessageParam(
                 role="user", content=user_input
